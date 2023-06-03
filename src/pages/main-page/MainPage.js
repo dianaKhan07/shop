@@ -1,10 +1,9 @@
-import {Container }from './style'
+import Header from '../../components/header/Header';
+import WithAuth from '../../hoc/WithAuth';
+
 const MainPage = ()=> {
-    
     return(
-       <Container>
-         welcome to the main page
-      </Container>
+    <Header/>
     )
 }
-export default MainPage;
+export default WithAuth(MainPage);

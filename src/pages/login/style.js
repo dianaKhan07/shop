@@ -32,3 +32,11 @@ export const Title = styled.h3`
     color: #1677ff;
     font-size: 20px;
 `
+export const TitleLink = styled.p`
+    text-align: right;
+    font-size: 13px; 
+
+    & span {
+        margin-right: 3px;
+    }
+`

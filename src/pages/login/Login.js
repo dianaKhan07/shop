@@ -1,9 +1,9 @@
 import { Button, Form, Input, message, } from 'antd';
-import { FormWrapper,Title }from './style'
+import { FormWrapper,Title, TitleLink }from './style'
 import { Controller, useForm } from 'react-hook-form';
 import { FetchAuth } from '../../api';
 import { useAuth } from '../../context/AuthContext';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
 
     const Login = ()=> {
@@ -49,6 +49,10 @@ import { useNavigate } from 'react-router-dom';
                         )}
                     />
                 </Form.Item>
+                <TitleLink>
+                    <span>Нет аккаунта?</span>
+                    <Link to={'/registration'}>зарегистрируйся</Link>
+                </TitleLink>
                 <Button block htmlType='submit' type='primary'>Войти</Button>
             </FormWrapper>
         )

@@ -6,7 +6,8 @@ import {
 
   import {Controller, useForm} from 'react-hook-form'
   import {FetchRegistration} from '../../api'
-  import {FormWrapper, Title} from './style'
+  import {FormWrapper, Title, TitleLink} from './style'
+import { Link } from 'react-router-dom';
 
 const Registration = () => {
     const {control, handleSubmit} = useForm();
@@ -80,6 +81,10 @@ const Registration = () => {
             )}
             />
         </Form.Item>
+                <TitleLink>
+                    <span>Есть аккаунта?</span>
+                    <Link to={'/login'}>войти</Link>
+                </TitleLink>
                 <Button block htmlType='submit' type='primary'>Зарегистрироваться</Button>
   
         </FormWrapper>
